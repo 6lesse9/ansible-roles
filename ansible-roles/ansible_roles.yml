@@ -9,9 +9,9 @@
   tasks:
     - name: Github clone
         git:
-        repo: https://github.com/miladhub/calculator-servlet-example.git
-        dest: /tmp/calculator-servlet-example/
-        clone: yes
+          repo: https://github.com/miladhub/calculator-servlet-example.git
+          dest: /tmp/calculator-servlet-example/
+          clone: yes
       
 - name: Production
   hosts: prod
