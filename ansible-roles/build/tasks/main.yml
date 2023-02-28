@@ -5,14 +5,19 @@
   with_items:
     - git
     - maven
+- name: Github clone
+  git:
+    repo: https://github.com/miladhub/calculator-servlet-example.git
+    dest: /tmp/calculator-servlet-example/
+    clone: yes
 
 - name: Build app
-    command: mvn --batch-mode -quiet install
-    args:
-      chdir: /tmp/calculator-servlet-example/
+  command: mvn --batch-mode -quiet install
+  args:
+    chdir: /tmp/calculator-servlet-example/
 
 - name: Move artifact from build to master
-    synchronize:
-      mode: pull
-      src: /tmp/calculator-servlet-example/target/mycalcwebapp.war
-      dest: /tmp/
+  synchronize:
+    mode: pull
+    src: /tmp/calculator-servlet-example/target/mycalcwebapp.war
+    dest: /tmp/
