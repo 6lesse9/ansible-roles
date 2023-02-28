@@ -1,0 +1,3 @@
+---
+# defaults file for prod
+dest_artifact: /var/lib/tomcat9/webapps

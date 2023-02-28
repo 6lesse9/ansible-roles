@@ -1,0 +1,4 @@
+---
+# handlers file for prod
+- name: Restart tomcat
+  service: name=tomcat9 state=restarted
