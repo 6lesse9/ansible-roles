@@ -2,10 +2,10 @@
 # tasks file for build
 - name: Install packages
   apt: name={{item}} state=present
-  update_cache: yes
   with_items:
       - git
       - maven
+  update_cache: yes
 
 - name: Github clone
   git:
