@@ -12,3 +12,12 @@
 
   roles:
     - prod
+
+  tasks:
+  - name: Move artifact from master to prod
+  synchronize:
+    mode: push
+    src: /tmp/mycalcwebapp.war
+    dest: dest_artifact
+    notify:
+      - Restart tomcat

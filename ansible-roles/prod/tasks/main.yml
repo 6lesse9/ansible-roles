@@ -5,11 +5,3 @@
     name: tomcat9
     state: present
     update_cache: yes
-
-- name: Move artifact from master to prod
-  synchronize:
-    mode: push
-    src: /tmp/mycalcwebapp.war
-    dest: dest_artifact
-    notify:
-      - Restart tomcat
