@@ -19,5 +19,5 @@
       mode: push
       src: /tmp/mycalcwebapp.war
       dest: dest_artifact
-      notify:
-        - Restart tomcat
+    notify:
+      - Restart tomcat
