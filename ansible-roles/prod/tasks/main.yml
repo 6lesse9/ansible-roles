@@ -4,6 +4,7 @@
   apt:
     name: tomcat9
     state: present
+    update_cache: yes
 
 - name: Move artifact from master to prod
   synchronize:
